@@ -1,0 +1,8 @@
+All five original JPEG screenshots visually reviewed in full.
+01: complete native draw.io diagram; 2 sites, 4 cards, 3 link labels, no label/card overlap; scope text visible.
+02: commit d2503b5; all 10 address rows, all 3 link rows; footer visible.
+03: commit d2503b5; DUPLICATE_ADDRESS, exit 1, three actual files; footer visible.
+04: commit d2503b5; both /31 endpoint rows, valid true; footer visible.
+05: commit d2503b5; 107 passed in 0.12s, seven scenarios, additional checks; footer visible.
+No personal paths, credentials, unrelated browser tabs or sensitive browser chrome visible.
+Screenshots saved directly from browser JPEG bytes without image manipulation.

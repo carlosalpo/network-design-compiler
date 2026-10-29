@@ -1,0 +1,47 @@
+{
+  "canonical_model_sha256": "95b8b9c6d07385e572d4c6a2e9adf71e9e0e6265c97d08f86bc0be2e92433e8c",
+  "counts": {
+    "devices": 4,
+    "interfaces": 10,
+    "links": 3,
+    "segments": 7,
+    "sites": 2,
+    "vrfs": 1
+  },
+  "files": {
+    "addresses.csv": {
+      "bytes": 1138,
+      "sha256": "03d0c8bff08bdb25ff0939ae38bfe69215a0ca85f932518421641e61d468f6a7"
+    },
+    "design.md": {
+      "bytes": 3316,
+      "sha256": "9456045b3f2045584736685eebae7bf7cc959317a3fa6ea25ccfce553fdc7363"
+    },
+    "devices.csv": {
+      "bytes": 166,
+      "sha256": "94e65764df8d5e90ad708b7a0f297394ef941109937f3443623130cc5f0da7dc"
+    },
+    "links.csv": {
+      "bytes": 421,
+      "sha256": "03a19c33a93322fa851e5aa26b842e0c1082f2eb67f2b02d20a5c1ee7fa540e8"
+    },
+    "model.json": {
+      "bytes": 3728,
+      "sha256": "95b8b9c6d07385e572d4c6a2e9adf71e9e0e6265c97d08f86bc0be2e92433e8c"
+    },
+    "topology.drawio": {
+      "bytes": 3357,
+      "sha256": "6bdb748132f4aff5959f0fc26fab0ad3b0021deab221f90d33faeb9541c76d8e"
+    },
+    "validation.json": {
+      "bytes": 102,
+      "sha256": "891a6e95b5362f833d11ee5e7c94a887ad5b94e484f49df230f036b78b9f3871"
+    }
+  },
+  "input_sha256": "87a162497900f0af5f8132577295af5e54bf89f01704d3f12534c30bc8b993a1",
+  "result": "valid-model",
+  "schema_version": 1,
+  "scope": "offline-design-consistency",
+  "tool": "network-design-compiler",
+  "version": "0.1.0"
+}

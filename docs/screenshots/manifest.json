@@ -1,0 +1,375 @@
+{
+  "schema_version": 1,
+  "project": "network-design-compiler",
+  "version": "0.1.0",
+  "commit": "d2503b5fa350d33782a78a429e551e2ba66612f4",
+  "captured_at": "2026-10-29T14:58:35.667304-06:00",
+  "completed_at": "2026-10-29T15:00:44.835613-06:00",
+  "timezone": "America/Tegucigalpa",
+  "python": "Python 3.12.14",
+  "source_repository": "https://github.com/carlosalpo/network-design-compiler",
+  "scope": "offline-design-consistency",
+  "tests_passed": 107,
+  "cli_scenarios_passed": 7,
+  "portfolio_selections": [
+    "images/01-native-topology.jpg",
+    "images/03-duplicate-rejected.jpg"
+  ],
+  "limitations": [
+    "Declared model consistency only; no connectivity, discovery, deployment or routing simulation.",
+    "Dense models require independent visual review.",
+    "The static evidence viewers are not product UI."
+  ],
+  "image_processing": "Original browser JPEG bytes. No retouching, compositing, text alteration, cropping or image regeneration.",
+  "screenshots": [
+    {
+      "path": "images/01-native-topology.jpg",
+      "sources": [
+        "outputs/two-site/topology.drawio",
+        "sources/two-site.json",
+        "logs/drawio-repair.json"
+      ],
+      "method": "draw.io web editor; original compressed XML; viewport screenshot; Fit Window 109%; shapes sidebar hidden",
+      "notes": "Complete diagram, separate transit labels; no relayout or XML changes.",
+      "sha256": "1666cae072d2b73154876112521855efeda05acc869e52e7e8999bc5033f55d2"
+    },
+    {
+      "path": "images/02-ip-and-ports.jpg",
+      "sources": [
+        "viewer/02-ip-and-ports.html",
+        "outputs/two-site/addresses.csv",
+        "outputs/two-site/links.csv",
+        "outputs/two-site/manifest.json"
+      ],
+      "method": "static HTML evidence viewer; full-page screenshot",
+      "notes": "Selected columns, all IP and link rows.",
+      "sha256": "ef2750d56f6ee30fe1e3f1aad9d6d2b1e9084002f56daff8a7c19276acfe4848"
+    },
+    {
+      "path": "images/03-duplicate-rejected.jpg",
+      "sources": [
+        "viewer/03-duplicate-rejected.html",
+        "outputs/invalid-duplicate-ip.log",
+        "outputs/invalid-duplicate-ip/validation.json",
+        "logs/rejected-files.log"
+      ],
+      "method": "static HTML evidence viewer; viewport screenshot",
+      "notes": "Only reports and manifest emitted.",
+      "sha256": "f622be84b01c3ff7e8c309630944672726792d0975262cfa41f462211ac0071a"
+    },
+    {
+      "path": "images/04-valid-31.jpg",
+      "sources": [
+        "viewer/04-valid-31.html",
+        "outputs/p2p-31.log",
+        "outputs/p2p-31/addresses.csv",
+        "outputs/p2p-31/validation.json"
+      ],
+      "method": "static HTML evidence viewer; full-page screenshot",
+      "notes": "WAN filter: 2 of 10 interface rows; selected columns.",
+      "sha256": "ec5da7af36090a02f9d50c5e2a322ba2bd7945d650b90cf112afa343a954da6a"
+    },
+    {
+      "path": "images/05-verification.jpg",
+      "sources": [
+        "viewer/05-verification.html",
+        "logs/pytest.log",
+        "logs/scenarios.log",
+        "logs/cross-artifact-check.log"
+      ],
+      "method": "static HTML evidence viewer; viewport screenshot",
+      "notes": "Local evidence, not remote CI evidence.",
+      "sha256": "05458b182ccf0908b5a74b26c4d2e71fda735139753a4caa96085975487fdf83"
+    }
+  ],
+  "files": {
+    "README.md": {
+      "sha256": "44744760cc957fe6f14f21641f4595ec3013020309bc65e80d584d7ff5593cd7",
+      "bytes": 7486
+    },
+    "captions.md": {
+      "sha256": "d8e04add20a6d87a6e2efa022a94e2d900c750d076ab2048becbd6ba15b74a87",
+      "bytes": 3119
+    },
+    "images/01-native-topology.jpg": {
+      "sha256": "1666cae072d2b73154876112521855efeda05acc869e52e7e8999bc5033f55d2",
+      "bytes": 54490
+    },
+    "images/02-ip-and-ports.jpg": {
+      "sha256": "ef2750d56f6ee30fe1e3f1aad9d6d2b1e9084002f56daff8a7c19276acfe4848",
+      "bytes": 119967
+    },
+    "images/03-duplicate-rejected.jpg": {
+      "sha256": "f622be84b01c3ff7e8c309630944672726792d0975262cfa41f462211ac0071a",
+      "bytes": 85367
+    },
+    "images/04-valid-31.jpg": {
+      "sha256": "ec5da7af36090a02f9d50c5e2a322ba2bd7945d650b90cf112afa343a954da6a",
+      "bytes": 83787
+    },
+    "images/05-verification.jpg": {
+      "sha256": "05458b182ccf0908b5a74b26c4d2e71fda735139753a4caa96085975487fdf83",
+      "bytes": 94640
+    },
+    "logs/cross-artifact-check.log": {
+      "sha256": "8ea97cfe5645e5340e728db73f265f912b1ece8902ad1b33c1c525f792b00dd3",
+      "bytes": 202
+    },
+    "logs/drawio-repair.json": {
+      "sha256": "60458a83a8a9b25672ac7b1099d669181ae0fe6e73968d7ecbc9ba8c5e2c4df9",
+      "bytes": 245
+    },
+    "logs/pytest.log": {
+      "sha256": "4c5b71c760e6bd109a66f93b74234e44c77af44ad19bd489c9209fa47c615436",
+      "bytes": 180
+    },
+    "logs/rejected-files.log": {
+      "sha256": "15da17974220a50009528e56fbce904837800e80dad2b3a013e9c1e5bb28e08b",
+      "bytes": 121
+    },
+    "logs/scenarios.log": {
+      "sha256": "b1316afdf203e78be0d71d2bc78b620d13fd1ce0422a0342666911b259682f37",
+      "bytes": 338
+    },
+    "logs/source-state.log": {
+      "sha256": "ba97a6615ac513adb1e8d4276ca618f22fa48331ee9ee5285820b28a76618a80",
+      "bytes": 390
+    },
+    "logs/visual-review.log": {
+      "sha256": "2fda4c9422ce6cc333083daa2c8b0556d6f976ff0a3389c0e3ecff6e7a726aec",
+      "bytes": 668
+    },
+    "outputs/disconnected/addresses.csv": {
+      "sha256": "1b683ceca366262e8e8c4221e1e52751b078cc5af3b9959d34e68d87ee3d0fe2",
+      "bytes": 942
+    },
+    "outputs/disconnected/design.md": {
+      "sha256": "00e470b4f4817591a23b4f99c9f88e653e215eaefaccc4fdbab32690ae6228c8",
+      "bytes": 3127
+    },
+    "outputs/disconnected/devices.csv": {
+      "sha256": "49830987471eb4671202a8c315b15c627f0de780c711dbf1a023c87a298f7ce4",
+      "bytes": 166
+    },
+    "outputs/disconnected/links.csv": {
+      "sha256": "2496e878da0cafeba23020bba8c7dfb077d1fc213b58720abd9e46e1f3dd190d",
+      "bytes": 324
+    },
+    "outputs/disconnected/manifest.json": {
+      "sha256": "ae5987cc6f81b2e172ee78cc6fcbec2ad3aaec5c1fdb5f270b82d0ad02f326f8",
+      "bytes": 1400
+    },
+    "outputs/disconnected/model.json": {
+      "sha256": "e84827674d8a4e4dd846bd107bdbdc4dc9aa0f2c5a46cea70db79572da1068ce",
+      "bytes": 3164
+    },
+    "outputs/disconnected/topology.drawio": {
+      "sha256": "2ae1cd34a68c2929ce890554d743c4902fee108ba88999da0c252892dae0296f",
+      "bytes": 3066
+    },
+    "outputs/disconnected/validation.json": {
+      "sha256": "dcc03c1ca1176568cf846f2038f7c1429c0301ba636f8c1f6c0125120e4abe83",
+      "bytes": 266
+    },
+    "outputs/disconnected.log": {
+      "sha256": "5bfeef64bc484821dfa9c63102b69b599f7e16b0ad497084b18dc4f93500f9cf",
+      "bytes": 93
+    },
+    "outputs/invalid-duplicate-ip/design.md": {
+      "sha256": "99dfb841648fb60a571887f2a0b433a1f385ffffeafb58d6d3bcb7c0d80e2756",
+      "bytes": 441
+    },
+    "outputs/invalid-duplicate-ip/manifest.json": {
+      "sha256": "cd615f626e7d59e39633d3e9a3e34c8d89149700236bb70e3020f11565fde63c",
+      "bytes": 634
+    },
+    "outputs/invalid-duplicate-ip/validation.json": {
+      "sha256": "e5683b97d82b45b0430c233cb0be9d924f4cf66dff77b4b0d0e2d1d7646e8a7a",
+      "bytes": 296
+    },
+    "outputs/invalid-duplicate-ip.log": {
+      "sha256": "42d345f17ddabab0af6ba882d3074e18b4ddcd58ca76a4126d1e622afb85d9e5",
+      "bytes": 103
+    },
+    "outputs/invalid-endpoint/design.md": {
+      "sha256": "e47e0c5beeb95903512750766a8db9fae3decf03b6c52db35bfa0ca0760a69a2",
+      "bytes": 526
+    },
+    "outputs/invalid-endpoint/manifest.json": {
+      "sha256": "bd0623a2181036ad3fced3242c0a70f555af3d4cae1bb7ad76a7e8a7711416a3",
+      "bytes": 634
+    },
+    "outputs/invalid-endpoint/validation.json": {
+      "sha256": "cb47d31923b113bc5d852c46d4bfd65bda8b5fc92c204214936e79d958a9b739",
+      "bytes": 459
+    },
+    "outputs/invalid-endpoint.log": {
+      "sha256": "03fb5db2faede9aba4b3609bea24644359ca39a6e722545c4e22b628c64c0ac9",
+      "bytes": 99
+    },
+    "outputs/invalid-overlap/design.md": {
+      "sha256": "e9090328f27103886df1b0c1150b44fa2afd01bf0b22021c98f9e7bb06fb4b52",
+      "bytes": 664
+    },
+    "outputs/invalid-overlap/manifest.json": {
+      "sha256": "25b522b4cf70cb15d2020b3da652ac9105fec251b97bd360455d6d000c3c2bc7",
+      "bytes": 634
+    },
+    "outputs/invalid-overlap/validation.json": {
+      "sha256": "cbb050270ab12e3c293f16260808a8b351a17e9b4adc9a048133cf6ce6282bad",
+      "bytes": 674
+    },
+    "outputs/invalid-overlap.log": {
+      "sha256": "723feab979969aacd34a6695c5db3ede283be32186927865569564f25ca7bc19",
+      "bytes": 98
+    },
+    "outputs/invalid-port-reuse/design.md": {
+      "sha256": "376653891629a1c80aa3dcff9b60a7e7a15c471f519f35d6dc74a7ae1df562d4",
+      "bytes": 643
+    },
+    "outputs/invalid-port-reuse/manifest.json": {
+      "sha256": "30efae5c741aaacde3e324aba9464b33956427c609afc4ed29e50c2a292f7d2b",
+      "bytes": 634
+    },
+    "outputs/invalid-port-reuse/validation.json": {
+      "sha256": "68a7f1ed874efeed711e390c1af5d66c6a31ee9668a1f9397924868db029fba0",
+      "bytes": 654
+    },
+    "outputs/invalid-port-reuse.log": {
+      "sha256": "145d02569690062d8240cd4617f578fa733c7438a3144018de432604c39feffa",
+      "bytes": 101
+    },
+    "outputs/p2p-31/addresses.csv": {
+      "sha256": "03d0c8bff08bdb25ff0939ae38bfe69215a0ca85f932518421641e61d468f6a7",
+      "bytes": 1138
+    },
+    "outputs/p2p-31/design.md": {
+      "sha256": "9456045b3f2045584736685eebae7bf7cc959317a3fa6ea25ccfce553fdc7363",
+      "bytes": 3316
+    },
+    "outputs/p2p-31/devices.csv": {
+      "sha256": "94e65764df8d5e90ad708b7a0f297394ef941109937f3443623130cc5f0da7dc",
+      "bytes": 166
+    },
+    "outputs/p2p-31/links.csv": {
+      "sha256": "03a19c33a93322fa851e5aa26b842e0c1082f2eb67f2b02d20a5c1ee7fa540e8",
+      "bytes": 421
+    },
+    "outputs/p2p-31/manifest.json": {
+      "sha256": "cebb37eb977801fcdd179fb18f1ef3d493e1e828164bb357250cf5adcf667898",
+      "bytes": 1402
+    },
+    "outputs/p2p-31/model.json": {
+      "sha256": "95b8b9c6d07385e572d4c6a2e9adf71e9e0e6265c97d08f86bc0be2e92433e8c",
+      "bytes": 3728
+    },
+    "outputs/p2p-31/topology.drawio": {
+      "sha256": "6bdb748132f4aff5959f0fc26fab0ad3b0021deab221f90d33faeb9541c76d8e",
+      "bytes": 3357
+    },
+    "outputs/p2p-31/validation.json": {
+      "sha256": "891a6e95b5362f833d11ee5e7c94a887ad5b94e484f49df230f036b78b9f3871",
+      "bytes": 102
+    },
+    "outputs/p2p-31.log": {
+      "sha256": "d3a7a132b2c6e7b4365ad4232b795bd543d336d1ad0d24c85ca6e8ee5e78d654",
+      "bytes": 87
+    },
+    "outputs/summary.json": {
+      "sha256": "b2d2e670d808cf965b469c0acc37634f763be973f116ff9806602593de8f2cc7",
+      "bytes": 1143
+    },
+    "outputs/two-site/addresses.csv": {
+      "sha256": "394ba83f6edd85c68bdf6d0146074685d6a668fdbe79b266c5e7e2b3e8527484",
+      "bytes": 1138
+    },
+    "outputs/two-site/design.md": {
+      "sha256": "80659d3d1949b6c7fc7c9d1c40ef46102486e4c6053dc7da5d69efca2f7e115f",
+      "bytes": 3316
+    },
+    "outputs/two-site/devices.csv": {
+      "sha256": "94e65764df8d5e90ad708b7a0f297394ef941109937f3443623130cc5f0da7dc",
+      "bytes": 166
+    },
+    "outputs/two-site/links.csv": {
+      "sha256": "d380904982d6fc4e5972c0a7f3c73c3447f0848f970e8f53191c3b3f03060393",
+      "bytes": 421
+    },
+    "outputs/two-site/manifest.json": {
+      "sha256": "c834fc25409474bec20e6a7983e3f364eea9912514326c97bd7719855bc33954",
+      "bytes": 1402
+    },
+    "outputs/two-site/model.json": {
+      "sha256": "421ab0d4038ea1ee2930aabff6f6256cfe73c6d36183f8212e7a70fcb3aad441",
+      "bytes": 3728
+    },
+    "outputs/two-site/topology.drawio": {
+      "sha256": "6bdb748132f4aff5959f0fc26fab0ad3b0021deab221f90d33faeb9541c76d8e",
+      "bytes": 3357
+    },
+    "outputs/two-site/validation.json": {
+      "sha256": "891a6e95b5362f833d11ee5e7c94a887ad5b94e484f49df230f036b78b9f3871",
+      "bytes": 102
+    },
+    "outputs/two-site.log": {
+      "sha256": "0c111ed7306fbe3bea8d4f7a2e473d7c858d7e748e8242623840ff7b48d23419",
+      "bytes": 89
+    },
+    "provenance/build_viewer.py": {
+      "sha256": "7edd289fe525620cb3d76a7e33d0e31459be1b4828888a0743b72ab0653108de",
+      "bytes": 6171
+    },
+    "provenance/repair-check.js": {
+      "sha256": "537c098b76ba260a2788d40fdf21dfa72e5d3073fe9f1197dee788507ab7e979",
+      "bytes": 925
+    },
+    "sources/disconnected.json": {
+      "sha256": "060214f80945aac00611df23ca9740193954fcc3c133e9763991ac6da35cef8f",
+      "bytes": 3164
+    },
+    "sources/invalid-duplicate-ip.json": {
+      "sha256": "3f275cdfea0c79e15b78eadbb489059ac7df89dc5731b3697180ff58938bd37a",
+      "bytes": 3728
+    },
+    "sources/invalid-endpoint.json": {
+      "sha256": "3c37f39a576204d08f0d0c9e8617d34cc59d2c2d5795dd0aa8581492c6940751",
+      "bytes": 3730
+    },
+    "sources/invalid-overlap.json": {
+      "sha256": "ba7599df85a0a254c4ad3f0b0cc119dfca0327841280bfdbc5a0f5a7f55d0fcd",
+      "bytes": 3728
+    },
+    "sources/invalid-port-reuse.json": {
+      "sha256": "5387e59d56d0d896208ee1f072ab7c0fd8c3b304ad198a1c07dd8e7e32c655fd",
+      "bytes": 3961
+    },
+    "sources/p2p-31.json": {
+      "sha256": "87a162497900f0af5f8132577295af5e54bf89f01704d3f12534c30bc8b993a1",
+      "bytes": 3728
+    },
+    "sources/two-site.json": {
+      "sha256": "a205f662c093166387d4031d9fe81430788c3adcc4f1c1c53c41a7454feef8d5",
+      "bytes": 3728
+    },
+    "viewer/02-ip-and-ports.html": {
+      "sha256": "9383387f06b103fc7573279f44a790ab88a27c57c5c6274832589bf7017de01a",
+      "bytes": 4293
+    },
+    "viewer/03-duplicate-rejected.html": {
+      "sha256": "f31af0408b0683dc311d70104465caa42acffa0d86fdbaae4554c399e3d733d9",
+      "bytes": 3055
+    },
+    "viewer/04-valid-31.html": {
+      "sha256": "ca133630055a4772f411d10491fd0dbc5e9eab358114e9a970433d4463dc13cd",
+      "bytes": 3078
+    },
+    "viewer/05-verification.html": {
+      "sha256": "e468d5ef3cad62aafff4e4327fd0350582335f9671b1fb9648c5e8336d2dbd8f",
+      "bytes": 3005
+    }
+  },
+  "integration": {
+    "note": "README gallery and portable reproduction instructions added; captured images, outputs and logs unchanged.",
+    "date": "2026-10-29"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "findings": [
+    {
+      "code": "DUPLICATE_ADDRESS",
+      "location": "interfaces/hq-edge/Ethernet1",
+      "message": "IPv4 address is already allocated in this VRF.",
+      "severity": "error"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "offline-design-consistency",
+  "valid": false
+}

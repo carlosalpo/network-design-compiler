@@ -1,0 +1,20 @@
+{
+  "canonical_model_sha256": "39cb86b8271b92f875eb57f8bd0e0664ad5c0b0f59e7d377c07d8dcfc7ea6e70",
+  "counts": {},
+  "files": {
+    "design.md": {
+      "bytes": 441,
+      "sha256": "99dfb841648fb60a571887f2a0b433a1f385ffffeafb58d6d3bcb7c0d80e2756"
+    },
+    "validation.json": {
+      "bytes": 296,
+      "sha256": "e5683b97d82b45b0430c233cb0be9d924f4cf66dff77b4b0d0e2d1d7646e8a7a"
+    }
+  },
+  "input_sha256": "3f275cdfea0c79e15b78eadbb489059ac7df89dc5731b3697180ff58938bd37a",
+  "result": "invalid-model",
+  "schema_version": 1,
+  "scope": "offline-design-consistency",
+  "tool": "network-design-compiler",
+  "version": "0.1.0"
+}

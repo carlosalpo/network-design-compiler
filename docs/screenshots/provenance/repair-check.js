@@ -1,0 +1,12 @@
+const fs = require('fs'), crypto = require('crypto');
+const file = process.argv[2];
+let xml = fs.readFileSync(file, 'utf8');
+const before=crypto.createHash('sha256').update(xml).digest('hex');
+const diagram = xml.match(/<mxfile[\s\S]*?<\/mxfile>|<mxGraphModel[\s\S]*?<\/mxGraphModel>/);
+if (diagram && xml.trim() !== diagram[0]) xml = diagram[0];
+xml = xml.replace(/="([^"]*)"/g, function(m, v) { return '=\"' + v.replace(/</g, '&lt;').replace(/&(?!(?:amp|lt|gt|quot|apos|#[0-9]+|#x[0-9a-fA-F]+);)/g, '&amp;') + '\"'; });
+xml = xml.replace(/<mxCell id="([^"]+)" parent="\1"\s*\/>/g, '<mxCell id="$1" parent="0"/>');
+const after=crypto.createHash('sha256').update(xml).digest('hex');
+console.log(JSON.stringify({source:'outputs/two-site/topology.drawio',before_sha256:before,after_sha256:after,unchanged:before===after},null,2));
+if(before!==after) throw Error('Repair would alter native output');
+fs.writeFileSync(file,xml);

@@ -1,0 +1,13 @@
+{
+  "findings": [
+    {
+      "code": "DISCONNECTED_TOPOLOGY",
+      "location": "devices",
+      "message": "Declared graph has 2 components.",
+      "severity": "warning"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "offline-design-consistency",
+  "valid": true
+}

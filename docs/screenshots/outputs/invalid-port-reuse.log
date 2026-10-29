@@ -1,0 +1,3 @@
+case=invalid-port-reuse
+exit=1
+INVALID MODEL | 3 artifacts | 0 warnings | offline-design-consistency

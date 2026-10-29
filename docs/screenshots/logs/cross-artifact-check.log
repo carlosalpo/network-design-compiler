@@ -1,0 +1,3 @@
+PASS counts: 2 sites / 4 devices / 10 interfaces / 3 links
+PASS all 6 link endpoints agree with addresses.csv (address, link, prefix, peer)
+PASS duplicate-address rejection emits exactly 3 report files

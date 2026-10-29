@@ -1,0 +1,19 @@
+{
+  "findings": [
+    {
+      "code": "UNKNOWN_ENDPOINT",
+      "location": "links/wan",
+      "message": "A referenced device/interface does not exist.",
+      "severity": "error"
+    },
+    {
+      "code": "P2P_LINK_REQUIRED",
+      "location": "segments/wan",
+      "message": "Exactly one link must join the two assigned interfaces.",
+      "severity": "error"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "offline-design-consistency",
+  "valid": false
+}

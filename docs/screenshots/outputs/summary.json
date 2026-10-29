@@ -1,0 +1,58 @@
+[
+  {
+    "case": "two-site",
+    "exit_code": 0,
+    "valid": true,
+    "expected_code": null,
+    "artifacts": 8,
+    "hashes_verified": true
+  },
+  {
+    "case": "p2p-31",
+    "exit_code": 0,
+    "valid": true,
+    "expected_code": null,
+    "artifacts": 8,
+    "hashes_verified": true
+  },
+  {
+    "case": "disconnected",
+    "exit_code": 0,
+    "valid": true,
+    "expected_code": "DISCONNECTED_TOPOLOGY",
+    "artifacts": 8,
+    "hashes_verified": true
+  },
+  {
+    "case": "invalid-duplicate-ip",
+    "exit_code": 1,
+    "valid": false,
+    "expected_code": "DUPLICATE_ADDRESS",
+    "artifacts": 3,
+    "hashes_verified": true
+  },
+  {
+    "case": "invalid-overlap",
+    "exit_code": 1,
+    "valid": false,
+    "expected_code": "SUBNET_OVERLAP",
+    "artifacts": 3,
+    "hashes_verified": true
+  },
+  {
+    "case": "invalid-endpoint",
+    "exit_code": 1,
+    "valid": false,
+    "expected_code": "UNKNOWN_ENDPOINT",
+    "artifacts": 3,
+    "hashes_verified": true
+  },
+  {
+    "case": "invalid-port-reuse",
+    "exit_code": 1,
+    "valid": false,
+    "expected_code": "PORT_REUSE",
+    "artifacts": 3,
+    "hashes_verified": true
+  }
+]

@@ -1,0 +1,8 @@
+PASS two-site: exit=0, artifacts=8
+PASS p2p-31: exit=0, artifacts=8
+PASS disconnected: exit=0, artifacts=8
+PASS invalid-duplicate-ip: exit=1, artifacts=3
+PASS invalid-overlap: exit=1, artifacts=3
+PASS invalid-endpoint: exit=1, artifacts=3
+PASS invalid-port-reuse: exit=1, artifacts=3
+7 CLI scenarios passed; all artifact hashes verified.

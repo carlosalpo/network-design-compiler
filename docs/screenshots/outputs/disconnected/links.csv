@@ -1,0 +1,3 @@
+id,a_device,a_interface,a_address,b_device,b_interface,b_address,segment,vrf,cidr,speed_mbps
+branch-transit,branch-core,Ethernet1,192.0.2.10,branch-edge,Ethernet2,192.0.2.9,branch-transit,production,192.0.2.8/30,1000
+hq-transit,hq-core,Ethernet1,192.0.2.1,hq-edge,Ethernet1,192.0.2.2,hq-transit,production,192.0.2.0/30,1000

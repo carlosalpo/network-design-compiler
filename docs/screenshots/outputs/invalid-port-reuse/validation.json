@@ -1,0 +1,25 @@
+{
+  "findings": [
+    {
+      "code": "PORT_REUSE",
+      "location": "links/reused-port",
+      "message": "An interface is used by more than one link endpoint.",
+      "severity": "error"
+    },
+    {
+      "code": "PORT_REUSE",
+      "location": "links/reused-port",
+      "message": "An interface is used by more than one link endpoint.",
+      "severity": "error"
+    },
+    {
+      "code": "P2P_LINK_REQUIRED",
+      "location": "segments/hq-transit",
+      "message": "Exactly one link must join the two assigned interfaces.",
+      "severity": "error"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "offline-design-consistency",
+  "valid": false
+}

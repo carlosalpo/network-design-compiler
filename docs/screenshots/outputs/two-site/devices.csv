@@ -1,0 +1,5 @@
+id,label,site,role,interfaces
+branch-core,Branch Core,branch,router,2
+branch-edge,Branch Edge,branch,router,3
+hq-core,Hq Core,hq,router,2
+hq-edge,Hq Edge,hq,router,3

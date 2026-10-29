@@ -1,0 +1,11 @@
+device,interface,site,role,segment,kind,vrf,cidr,address,link,peer_device,peer_interface
+branch-core,Ethernet1,branch,router,branch-transit,p2p,production,192.0.2.8/30,192.0.2.10,branch-transit,branch-edge,Ethernet2
+branch-core,Loopback0,branch,router,branch-core-lo,loopback,production,198.51.100.4/32,198.51.100.4,,,
+branch-edge,Ethernet1,branch,router,wan,p2p,production,192.0.2.4/30,192.0.2.6,wan,hq-edge,Ethernet2
+branch-edge,Ethernet2,branch,router,branch-transit,p2p,production,192.0.2.8/30,192.0.2.9,branch-transit,branch-core,Ethernet1
+branch-edge,Loopback0,branch,router,branch-edge-lo,loopback,production,198.51.100.3/32,198.51.100.3,,,
+hq-core,Ethernet1,hq,router,hq-transit,p2p,production,192.0.2.0/30,192.0.2.1,hq-transit,hq-edge,Ethernet1
+hq-core,Loopback0,hq,router,hq-core-lo,loopback,production,198.51.100.1/32,198.51.100.1,,,
+hq-edge,Ethernet1,hq,router,hq-transit,p2p,production,192.0.2.0/30,192.0.2.2,hq-transit,hq-core,Ethernet1
+hq-edge,Ethernet2,hq,router,wan,p2p,production,192.0.2.4/30,192.0.2.5,wan,branch-edge,Ethernet1
+hq-edge,Loopback0,hq,router,hq-edge-lo,loopback,production,198.51.100.2/32,198.51.100.2,,,

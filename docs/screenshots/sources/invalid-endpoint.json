@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "id": "two-site-reference",
+  "title": "Two-site routed network reference",
+  "sites": [
+    {
+      "id": "hq",
+      "label": "Headquarters"
+    },
+    {
+      "id": "branch",
+      "label": "Branch"
+    }
+  ],
+  "vrfs": [
+    {
+      "id": "production",
+      "label": "Production routing domain"
+    }
+  ],
+  "segments": [
+    {
+      "id": "hq-core-lo",
+      "vrf": "production",
+      "kind": "loopback",
+      "cidr": "198.51.100.1/32"
+    },
+    {
+      "id": "hq-edge-lo",
+      "vrf": "production",
+      "kind": "loopback",
+      "cidr": "198.51.100.2/32"
+    },
+    {
+      "id": "branch-edge-lo",
+      "vrf": "production",
+      "kind": "loopback",
+      "cidr": "198.51.100.3/32"
+    },
+    {
+      "id": "branch-core-lo",
+      "vrf": "production",
+      "kind": "loopback",
+      "cidr": "198.51.100.4/32"
+    },
+    {
+      "id": "hq-transit",
+      "vrf": "production",
+      "kind": "p2p",
+      "cidr": "192.0.2.0/30"
+    },
+    {
+      "id": "wan",
+      "vrf": "production",
+      "kind": "p2p",
+      "cidr": "192.0.2.4/30"
+    },
+    {
+      "id": "branch-transit",
+      "vrf": "production",
+      "kind": "p2p",
+      "cidr": "192.0.2.8/30"
+    }
+  ],
+  "devices": [
+    {
+      "id": "hq-core",
+      "label": "Hq Core",
+      "site": "hq",
+      "role": "router",
+      "interfaces": [
+        {
+          "name": "Loopback0",
+          "segment": "hq-core-lo",
+          "address": "198.51.100.1"
+        },
+        {
+          "name": "Ethernet1",
+          "segment": "hq-transit",
+          "address": "192.0.2.1"
+        }
+      ]
+    },
+    {
+      "id": "hq-edge",
+      "label": "Hq Edge",
+      "site": "hq",
+      "role": "router",
+      "interfaces": [
+        {
+          "name": "Loopback0",
+          "segment": "hq-edge-lo",
+          "address": "198.51.100.2"
+        },
+        {
+          "name": "Ethernet1",
+          "segment": "hq-transit",
+          "address": "192.0.2.2"
+        },
+        {
+          "name": "Ethernet2",
+          "segment": "wan",
+          "address": "192.0.2.5"
+        }
+      ]
+    },
+    {
+      "id": "branch-edge",
+      "label": "Branch Edge",
+      "site": "branch",
+      "role": "router",
+      "interfaces": [
+        {
+          "name": "Loopback0",
+          "segment": "branch-edge-lo",
+          "address": "198.51.100.3"
+        },
+        {
+          "name": "Ethernet1",
+          "segment": "wan",
+          "address": "192.0.2.6"
+        },
+        {
+          "name": "Ethernet2",
+          "segment": "branch-transit",
+          "address": "192.0.2.9"
+        }
+      ]
+    },
+    {
+      "id": "branch-core",
+      "label": "Branch Core",
+      "site": "branch",
+      "role": "router",
+      "interfaces": [
+        {
+          "name": "Loopback0",
+          "segment": "branch-core-lo",
+          "address": "198.51.100.4"
+        },
+        {
+          "name": "Ethernet1",
+          "segment": "branch-transit",
+          "address": "192.0.2.10"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "id": "hq-transit",
+      "a": {
+        "device": "hq-core",
+        "interface": "Ethernet1"
+      },
+      "b": {
+        "device": "hq-edge",
+        "interface": "Ethernet1"
+      },
+      "speed_mbps": 1000
+    },
+    {
+      "id": "wan",
+      "a": {
+        "device": "hq-edge",
+        "interface": "MissingPort"
+      },
+      "b": {
+        "device": "branch-edge",
+        "interface": "Ethernet1"
+      },
+      "speed_mbps": 1000
+    },
+    {
+      "id": "branch-transit",
+      "a": {
+        "device": "branch-edge",
+        "interface": "Ethernet2"
+      },
+      "b": {
+        "device": "branch-core",
+        "interface": "Ethernet1"
+      },
+      "speed_mbps": 1000
+    }
+  ]
+}

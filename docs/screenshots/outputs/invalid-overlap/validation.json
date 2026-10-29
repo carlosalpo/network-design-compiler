@@ -1,0 +1,25 @@
+{
+  "findings": [
+    {
+      "code": "ADDRESS_OUTSIDE_SUBNET",
+      "location": "interfaces/branch-core/Ethernet1",
+      "message": "Address is outside its declared segment.",
+      "severity": "error"
+    },
+    {
+      "code": "ADDRESS_OUTSIDE_SUBNET",
+      "location": "interfaces/branch-edge/Ethernet2",
+      "message": "Address is outside its declared segment.",
+      "severity": "error"
+    },
+    {
+      "code": "SUBNET_OVERLAP",
+      "location": "segments/hq-transit",
+      "message": "Overlaps segment branch-transit in the same VRF.",
+      "severity": "error"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "offline-design-consistency",
+  "valid": false
+}

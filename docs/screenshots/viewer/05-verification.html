@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>107 tests. Seven CLI scenarios. | Evidence viewer</title><style>*{box-sizing:border-box}body{margin:0;background:#f4f6f8;color:#152a38;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{padding:26px 32px;max-width:1600px;margin:auto}header{border-bottom:2px solid #235c72;padding-bottom:14px;margin-bottom:16px}.kicker{font-size:11px;letter-spacing:1.7px;font-weight:700;color:#376479}h1{font-size:28px;margin:7px 0}header p{margin:0;color:#51616b;font-size:12px}section{background:white;border:1px solid #d7e0e6;margin:12px 0;padding:14px 16px}h2{font-size:14px;margin:0 0 10px;color:#235c72}table{width:100%;border-collapse:collapse;text-align:left;font:12px ui-monospace,SFMono-Regular,Consolas,monospace}th{color:#44606f;font-size:11px;background:#f1f5f7}th,td{padding:7px 6px;border-bottom:1px solid #e6ecef;white-space:nowrap}tr:last-child td{border:0}pre{font:14px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap;margin:0;color:#172c3a}.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}.grid section{margin-top:0}footer{font-size:11px;color:#556975;line-height:1.6;margin-top:14px}.note{font-size:13px;line-height:1.6}.status{display:inline-block;border:1px solid #9fb9b1;color:#24604f;background:#edf6f1;padding:5px 10px;font-size:12px;margin:4px 0 8px}.reject{color:#9a3434;background:#fff0ee;border-color:#dbb0a8}</style><main><header><div class="kicker">NETWORK DESIGN COMPILER / 05 / REPRODUCIBLE CHECKS</div><h1>107 tests. Seven CLI scenarios.</h1><p>Static evidence viewer · Not product UI · v0.1.0 · commit d2503b5 · 2026-10-29</p></header><section><h2>logs/pytest.log · .venv/bin/python -m pytest -q -p no:cacheprovider</h2><pre>........................................................................ [ 67%]
+...................................                                      [100%]
+107 passed in 0.12s
+</pre></section><section><h2>logs/scenarios.log · .venv/bin/python scripts/check_examples.py --output &lt;fresh-directory&gt;</h2><pre>PASS two-site: exit=0, artifacts=8
+PASS p2p-31: exit=0, artifacts=8
+PASS disconnected: exit=0, artifacts=8
+PASS invalid-duplicate-ip: exit=1, artifacts=3
+PASS invalid-overlap: exit=1, artifacts=3
+PASS invalid-endpoint: exit=1, artifacts=3
+PASS invalid-port-reuse: exit=1, artifacts=3
+7 CLI scenarios passed; all artifact hashes verified.
+</pre></section><section><h2>logs/cross-artifact-check.log · additional evidence checks</h2><pre>PASS counts: 2 sites / 4 devices / 10 interfaces / 3 links
+PASS all 6 link endpoints agree with addresses.csv (address, link, prefix, peer)
+PASS duplicate-address rejection emits exactly 3 report files
+</pre></section><footer>Scope: offline-design-consistency · Public synthetic examples · No discovery, deployment, routing simulation or verified connectivity.<br>Values and logs reproduced from generated files; source paths are relative to this evidence package.</footer></main></html>

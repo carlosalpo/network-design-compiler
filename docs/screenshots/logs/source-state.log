@@ -1,0 +1,7 @@
+Execution commit: d2503b5fa350d33782a78a429e551e2ba66612f4
+Source comparison: git diff --name-only d2503b5fa350d33782a78a429e551e2ba66612f4 -- src tests scripts examples pyproject.toml
+Result: empty (implementation and synthetic inputs unchanged)
+Observed git status --porcelain (separate integration task):
+ M README.md
+?? docs/verification.md
+Capture task writes: evidence workspace only
