@@ -94,7 +94,7 @@ def topology(data):
     }
     max_rows = max((len(values) + 1) // 2 for values in by_site.values())
     site_height = max(180, max_rows * 120 + 70)
-    page_width = 1040
+    page_width = 1200
     page_height = 140 + ((len(by_site) + 1) // 2) * (site_height + 100)
     mxfile = ET.Element("mxfile", {"host": "app.diagrams.net", "type": "device"})
     diagram = ET.SubElement(mxfile, "diagram", {"id": "network-design", "name": "Routed topology"})
@@ -142,7 +142,7 @@ def topology(data):
         "text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=14;",
         40,
         20,
-        960,
+        1120,
         60,
     )
     roles = {"router": "#dae8fc", "switch": "#d5e8d4", "firewall": "#ffe6cc", "server": "#e1d5e7"}
@@ -160,9 +160,9 @@ def topology(data):
             "1",
             "swimlane;html=1;whiteSpace=wrap;startSize=36;rounded=1;"
             "fillColor=#f5f5f5;strokeColor=#b8c5cc;fontStyle=1;",
-            40 + (i % 2) * 500,
+            40 + (i % 2) * 580,
             120 + (i // 2) * (site_height + 100),
-            440,
+            500,
             site_height,
         )
         for j, device in enumerate(by_site[site["id"]]):
@@ -173,7 +173,7 @@ def topology(data):
                 sid,
                 "rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#506575;"
                 f"fillColor={roles[device['role']]};",
-                40 + (j % 2) * 180,
+                40 + (j % 2) * 240,
                 60 + (j // 2) * 120,
                 140,
                 80,
